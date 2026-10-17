@@ -37,18 +37,26 @@
         </div>
       </div>
 
-      <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-300">
-        <a href="#games" class="hover:text-emerald-400 transition">Oyunlarımız & Uygulamalar</a>
-        <a href="#fonzi" class="hover:text-emerald-400 transition flex items-center gap-1.5">
-          <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Fonzi
-        </a>
-        <a href="#ravelore" class="hover:text-purple-400 transition flex items-center gap-1.5">
-          <span class="w-2 h-2 rounded-full bg-purple-400"></span> RaveLore
-        </a>
-        <div class="h-4 w-px bg-slate-800"></div>
-        <a href="privacy.html" class="hover:text-slate-100 transition">Fonzi Gizlilik</a>
-        <a href="ravelore-privacy.html" class="hover:text-slate-100 transition">RaveLore Gizlilik</a>
-        <a href="app-ads.txt" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700/80 font-code text-[11px] transition">app-ads.txt</a>
+      <nav class="flex items-center gap-4 sm:gap-6 text-xs font-semibold text-slate-300">
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#games" data-i18n="nav_games" class="hover:text-emerald-400 transition">Oyunlarımız & Uygulamalar</a>
+          <a href="#fonzi" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Fonzi
+          </a>
+          <a href="#ravelore" class="hover:text-purple-400 transition flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-purple-400"></span> RaveLore
+          </a>
+          <div class="h-4 w-px bg-slate-800"></div>
+          <a href="privacy.html" data-i18n="nav_fonzi_privacy" class="hover:text-slate-100 transition">Fonzi Gizlilik</a>
+          <a href="ravelore-privacy.html" data-i18n="nav_ravelore_privacy" class="hover:text-slate-100 transition">RaveLore Gizlilik</a>
+          <a href="app-ads.txt" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700/80 font-code text-[11px] transition">app-ads.txt</a>
+        </div>
+
+        <!-- Language Selector -->
+        <div class="flex items-center rounded-xl bg-slate-900 border border-slate-800 p-1 text-[11px] font-bold">
+          <button id="btn-tr" onclick="setLanguage('tr')" class="px-2.5 py-1 rounded-lg transition text-emerald-400 bg-slate-800 shadow-sm font-bold">TR</button>
+          <button id="btn-en" onclick="setLanguage('en')" class="px-2.5 py-1 rounded-lg transition text-slate-400 hover:text-white font-bold">EN</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -57,12 +65,12 @@
   <section class="relative max-w-6xl mx-auto px-6 pt-16 pb-12 text-center">
     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-emerald-500/10 via-slate-900 to-purple-500/10 border border-slate-800 text-slate-300 text-xs font-bold uppercase tracking-wider mb-6">
       <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-      Kam Interactive Resmi Portföyü
+      <span data-i18n="hero_badge">Kam Interactive Resmi Portföyü</span>
     </div>
-    <h2 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight max-w-3xl mx-auto">
+    <h2 data-i18n="hero_title" class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight max-w-3xl mx-auto">
       Yeni Nesil Mobil Oyunlar & <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-purple-400">Yapay Zekâ Deneyimleri</span>
     </h2>
-    <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto mt-4 leading-relaxed">
+    <p data-i18n="hero_desc" class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto mt-4 leading-relaxed">
       Finansal hiciv simülasyonlarından etkileşimli çok karakterli yapay zekâ evrenlerine kadar yenilikçi ve sürükleyici mobil deneyimler geliştiriyoruz.
     </p>
   </section>
@@ -81,7 +89,7 @@
             <img src="app-icon-512.png" alt="Fonzi App Icon" class="w-full h-full rounded-2xl object-cover" />
           </div>
           <div class="mt-4 flex items-center gap-2">
-            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-bold">Simülasyon & Tycoon</span>
+            <span data-i18n="fonzi_tag" class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-bold">Simülasyon & Tycoon</span>
             <span class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[11px] font-mono">v1.0.0</span>
           </div>
         </div>
@@ -89,28 +97,28 @@
         <!-- Description Column -->
         <div class="lg:col-span-8 space-y-5">
           <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-400">
-            <span>💼 Finansal Hiciv Simülasyonu</span>
+            <span data-i18n="fonzi_subhead">💼 Finansal Hiciv Simülasyonu</span>
           </div>
           <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
             FONZI: <span class="text-emerald-400 font-luxury">PONZI TYCOON</span>
           </h3>
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p data-i18n="fonzi_desc" class="text-slate-300 text-sm sm:text-base leading-relaxed">
             Köhne bir banka gişesinden Boğaz manzaralı lüks rezidanslara uzanan kara mizah dolu bir saadet zinciri simülasyonu! Mahalle esnafından sosyete simalarına yatırımcıları ikna edin, faiz pazarlığı yapın, krizleri savuşturun ve operasyon patlamadan serveti offshore hesaplara kaçırın.
           </p>
 
           <!-- Key Features -->
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-1 text-xs">
             <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
-              <span class="text-emerald-400 font-bold block">💰 Dinamik Pazarlık</span>
-              <span class="text-slate-400 text-[11px]">Faiz oranını açgözlülüğe göre belirleyin.</span>
+              <span data-i18n="fonzi_feat1_title" class="text-emerald-400 font-bold block">💰 Dinamik Pazarlık</span>
+              <span data-i18n="fonzi_feat1_desc" class="text-slate-400 text-[11px]">Faiz oranını açgözlülüğe göre belirleyin.</span>
             </div>
             <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
-              <span class="text-cyan-400 font-bold block">📈 Canlı Borsa</span>
-              <span class="text-slate-400 text-[11px]">BIST ve kripto portföy yönetimi.</span>
+              <span data-i18n="fonzi_feat2_title" class="text-cyan-400 font-bold block">📈 Canlı Borsa</span>
+              <span data-i18n="fonzi_feat2_desc" class="text-slate-400 text-[11px]">BIST ve kripto portföy yönetimi.</span>
             </div>
             <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
-              <span class="text-purple-400 font-bold block">✈️ Özel Jet Kaçışı</span>
-              <span class="text-slate-400 text-[11px]">İsviçre hesaplarına fon aktararak kaçış.</span>
+              <span data-i18n="fonzi_feat3_title" class="text-purple-400 font-bold block">✈️ Özel Jet Kaçışı</span>
+              <span data-i18n="fonzi_feat3_desc" class="text-slate-400 text-[11px]">İsviçre hesaplarına fon aktararak kaçış.</span>
             </div>
           </div>
 
@@ -118,9 +126,9 @@
           <div class="flex flex-wrap items-center gap-3 pt-2">
             <div class="px-4 py-2.5 rounded-xl bg-emerald-600 text-white font-bold text-xs shadow-lg shadow-emerald-950 flex items-center gap-2">
               <span>Google Play Store</span>
-              <span class="bg-emerald-700/80 px-2 py-0.5 rounded text-[10px]">Kapalı Testte</span>
+              <span data-i18n="fonzi_status" class="bg-emerald-700/80 px-2 py-0.5 rounded text-[10px]">Kapalı Testte</span>
             </div>
-            <a href="privacy.html" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-750 text-slate-200 border border-slate-700 font-bold text-xs transition">
+            <a href="privacy.html" data-i18n="fonzi_privacy_btn" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-750 text-slate-200 border border-slate-700 font-bold text-xs transition">
               Gizlilik Politikası (Privacy Policy)
             </a>
           </div>
@@ -139,7 +147,7 @@
             <img src="ravelore-icon-512.png" alt="RaveLore App Icon" class="w-full h-full rounded-2xl object-cover" />
           </div>
           <div class="mt-4 flex items-center gap-2">
-            <span class="px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30 text-[11px] font-bold">Yapay Zekâ & Rol Yapma</span>
+            <span data-i18n="ravelore_tag" class="px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30 text-[11px] font-bold">Yapay Zekâ & Rol Yapma</span>
             <span class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[11px] font-mono">v1.0.0</span>
           </div>
         </div>
@@ -147,28 +155,28 @@
         <!-- Description Column -->
         <div class="lg:col-span-8 space-y-5">
           <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-purple-400">
-            <span>🎭 Çok Karakterli Hikâye ve Rol Yapma Platformu</span>
+            <span data-i18n="ravelore_subhead">🎭 Çok Karakterli Hikâye ve Rol Yapma Platformu</span>
           </div>
           <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
             RAVELORE: <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 font-luxury">AI ROLEPLAY</span>
           </h3>
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p data-i18n="ravelore_desc" class="text-slate-300 text-sm sm:text-base leading-relaxed">
             Gelişmiş senaryo motoru ve çoklu karakter mimarisi ile donatılmış yeni nesil yapay zekâ rol yapma deneyimi. Kendi özgün evrenlerinizi yaratın, derin kişilik kartlarına sahip karakterleri sahneye dahil edin ve dinamik sahne hafızasıyla tutarlı, sinematik sohbetlerin tadını çıkarın.
           </p>
 
           <!-- Key Features -->
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-1 text-xs">
             <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
-              <span class="text-purple-400 font-bold block">👥 Çoklu Karakterler</span>
-              <span class="text-slate-400 text-[11px]">1–5 farklı karakterle aynı anda rol yapın.</span>
+              <span data-i18n="ravelore_feat1_title" class="text-purple-400 font-bold block">👥 Çoklu Karakterler</span>
+              <span data-i18n="ravelore_feat1_desc" class="text-slate-400 text-[11px]">1–5 farklı karakterle aynı anda rol yapın.</span>
             </div>
             <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
-              <span class="text-pink-400 font-bold block">🧠 Sahne & Bellek Mantığı</span>
-              <span class="text-slate-400 text-[11px]">Uzun diyaloglarda tutarlı yapay zekâ hafızası.</span>
+              <span data-i18n="ravelore_feat2_title" class="text-pink-400 font-bold block">🧠 Sahne & Bellek Mantığı</span>
+              <span data-i18n="ravelore_feat2_desc" class="text-slate-400 text-[11px]">Uzun diyaloglarda tutarlı yapay zekâ hafızası.</span>
             </div>
             <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
-              <span class="text-cyan-400 font-bold block">📚 Keşfet & Topluluk</span>
-              <span class="text-slate-400 text-[11px]">Popüler botları keşfedin, kütüphanenize ekleyin.</span>
+              <span data-i18n="ravelore_feat3_title" class="text-cyan-400 font-bold block">📚 Keşfet & Topluluk</span>
+              <span data-i18n="ravelore_feat3_desc" class="text-slate-400 text-[11px]">Popüler botları keşfedin, kütüphanenize ekleyin.</span>
             </div>
           </div>
 
@@ -176,9 +184,9 @@
           <div class="flex flex-wrap items-center gap-3 pt-2">
             <div class="px-4 py-2.5 rounded-xl bg-purple-600 text-white font-bold text-xs shadow-lg shadow-purple-950 flex items-center gap-2">
               <span>Google Play Store</span>
-              <span class="bg-purple-700/80 px-2 py-0.5 rounded text-[10px]">Kapalı Testte</span>
+              <span data-i18n="ravelore_status" class="bg-purple-700/80 px-2 py-0.5 rounded text-[10px]">Kapalı Testte</span>
             </div>
-            <a href="ravelore-privacy.html" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-750 text-slate-200 border border-slate-700 font-bold text-xs transition">
+            <a href="ravelore-privacy.html" data-i18n="ravelore_privacy_btn" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-750 text-slate-200 border border-slate-700 font-bold text-xs transition">
               Gizlilik Politikası (Privacy Policy)
             </a>
           </div>
@@ -195,18 +203,146 @@
         <div class="flex items-center justify-center md:justify-start gap-2 text-white font-bold text-sm mb-1">
           <span>KAM INTERACTIVE</span>
         </div>
-        <p>© 2026 Kam Interactive. Tüm hakları saklıdır.</p>
-        <p class="text-[11px] text-slate-600 mt-0.5">Fonzi: Ponzi Tycoon ve RaveLore bağımsız oyun stüdyomuzun resmi projeleridir.</p>
+        <p data-i18n="footer_rights">© 2026 Kam Interactive. Tüm hakları saklıdır.</p>
+        <p data-i18n="footer_desc" class="text-[11px] text-slate-600 mt-0.5">Fonzi: Ponzi Tycoon ve RaveLore bağımsız oyun stüdyomuzun resmi projeleridir.</p>
       </div>
 
       <div class="flex flex-wrap items-center justify-center gap-6">
-        <a href="privacy.html" class="hover:text-emerald-400 transition">Fonzi Gizlilik Politikası</a>
-        <a href="ravelore-privacy.html" class="hover:text-purple-400 transition">RaveLore Gizlilik Politikası</a>
+        <a href="privacy.html" data-i18n="footer_fonzi_privacy" class="hover:text-emerald-400 transition">Fonzi Gizlilik Politikası</a>
+        <a href="ravelore-privacy.html" data-i18n="footer_ravelore_privacy" class="hover:text-purple-400 transition">RaveLore Gizlilik Politikası</a>
         <a href="app-ads.txt" target="_blank" class="hover:text-slate-300 font-code transition">app-ads.txt</a>
         <a href="mailto:contact.kaminteractive@gmail.com" class="hover:text-emerald-400 transition">contact.kaminteractive@gmail.com</a>
       </div>
     </div>
   </footer>
 
+  <!-- Bilingual Language Switcher Script -->
+  <script>
+    const translations = {
+      tr: {
+        doc_title: "Kam Interactive | Independent Game & AI Studio",
+        meta_desc: "Kam Interactive resmi web sitesi. Fonzi: Ponzi Tycoon ve RaveLore mobil uygulamaları, gizlilik politikaları ve stüdyo projeleri.",
+        nav_games: "Oyunlarımız & Uygulamalar",
+        nav_fonzi_privacy: "Fonzi Gizlilik",
+        nav_ravelore_privacy: "RaveLore Gizlilik",
+        hero_badge: "Kam Interactive Resmi Portföyü",
+        hero_title: 'Yeni Nesil Mobil Oyunlar & <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-purple-400">Yapay Zekâ Deneyimleri</span>',
+        hero_desc: "Finansal hiciv simülasyonlarından etkileşimli çok karakterli yapay zekâ evrenlerine kadar yenilikçi ve sürükleyici mobil deneyimler geliştiriyoruz.",
+        
+        fonzi_tag: "Simülasyon & Tycoon",
+        fonzi_subhead: "💼 Finansal Hiciv Simülasyonu",
+        fonzi_desc: "Köhne bir banka gişesinden Boğaz manzaralı lüks rezidanslara uzanan kara mizah dolu bir saadet zinciri simülasyonu! Mahalle esnafından sosyete simalarına yatırımcıları ikna edin, faiz pazarlığı yapın, krizleri savuşturun ve operasyon patlamadan serveti offshore hesaplara kaçırın.",
+        fonzi_feat1_title: "💰 Dinamik Pazarlık",
+        fonzi_feat1_desc: "Faiz oranını açgözlülüğe göre belirleyin.",
+        fonzi_feat2_title: "📈 Canlı Borsa",
+        fonzi_feat2_desc: "BIST ve kripto portföy yönetimi.",
+        fonzi_feat3_title: "✈️ Özel Jet Kaçışı",
+        fonzi_feat3_desc: "İsviçre hesaplarına fon aktararak kaçış.",
+        fonzi_status: "Kapalı Testte",
+        fonzi_privacy_btn: "Gizlilik Politikası (Privacy Policy)",
+
+        ravelore_tag: "Yapay Zekâ & Rol Yapma",
+        ravelore_subhead: "🎭 Çok Karakterli Hikâye ve Rol Yapma Platformu",
+        ravelore_desc: "Gelişmiş senaryo motoru ve çoklu karakter mimarisi ile donatılmış yeni nesil yapay zekâ rol yapma deneyimi. Kendi özgün evrenlerinizi yaratın, derin kişilik kartlarına sahip karakterleri sahneye dahil edin ve dinamik sahne hafızasıyla tutarlı, sinematik sohbetlerin tadını çıkarın.",
+        ravelore_feat1_title: "👥 Çoklu Karakterler",
+        ravelore_feat1_desc: "1–5 farklı karakterle aynı anda rol yapın.",
+        ravelore_feat2_title: "🧠 Sahne & Bellek Mantığı",
+        ravelore_feat2_desc: "Uzun diyaloglarda tutarlı yapay zekâ hafızası.",
+        ravelore_feat3_title: "📚 Keşfet & Topluluk",
+        ravelore_feat3_desc: "Popüler botları keşfedin, kütüphanenize ekleyin.",
+        ravelore_status: "Kapalı Testte",
+        ravelore_privacy_btn: "Gizlilik Politikası (Privacy Policy)",
+
+        footer_desc: "Fonzi: Ponzi Tycoon ve RaveLore bağımsız oyun stüdyomuzun resmi projeleridir.",
+        footer_rights: "© 2026 Kam Interactive. Tüm hakları saklıdır.",
+        footer_fonzi_privacy: "Fonzi Gizlilik Politikası",
+        footer_ravelore_privacy: "RaveLore Gizlilik Politikası"
+      },
+      en: {
+        doc_title: "Kam Interactive | Independent Game & AI Studio",
+        meta_desc: "Official website of Kam Interactive. Fonzi: Ponzi Tycoon and RaveLore mobile apps, privacy policies, and studio projects.",
+        nav_games: "Games & Applications",
+        nav_fonzi_privacy: "Fonzi Privacy",
+        nav_ravelore_privacy: "RaveLore Privacy",
+        hero_badge: "Official Kam Interactive Portfolio",
+        hero_title: 'Next-Gen Mobile Games & <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-purple-400">AI Experiences</span>',
+        hero_desc: "From financial satire simulations to interactive multi-character AI universes, we build innovative and deeply immersive mobile experiences.",
+
+        fonzi_tag: "Simulation & Tycoon",
+        fonzi_subhead: "💼 Financial Satire Simulation",
+        fonzi_desc: "A dark humor Ponzi scheme simulation spanning from a dusty bank counter to luxury Bosphorus penthouses! Convince investors ranging from local shopkeepers to high-society elites, negotiate yields, fend off crises, and smuggle your fortune into offshore accounts before the operation collapses.",
+        fonzi_feat1_title: "💰 Dynamic Bargaining",
+        fonzi_feat1_desc: "Negotiate interest rates based on investor greed.",
+        fonzi_feat2_title: "📈 Live Stock & Crypto",
+        fonzi_feat2_desc: "Trade market indices and crypto portfolios.",
+        fonzi_feat3_title: "✈️ Private Jet Escape",
+        fonzi_feat3_desc: "Stash funds into Swiss vaults and escape in style.",
+        fonzi_status: "Closed Testing",
+        fonzi_privacy_btn: "Privacy Policy",
+
+        ravelore_tag: "AI & Roleplay",
+        ravelore_subhead: "🎭 Multi-Character Story & Roleplay Platform",
+        ravelore_desc: "A cutting-edge AI roleplay platform engineered with an advanced scenario engine and multi-character architecture. Craft your custom universes, bring rich persona cards onto the stage, and enjoy coherent, cinematic conversations with persistent scene memory.",
+        ravelore_feat1_title: "👥 Multi-Character Scenes",
+        ravelore_feat1_desc: "Roleplay with 1–5 distinct AI characters simultaneously.",
+        ravelore_feat2_title: "🧠 Scene & Memory Engine",
+        ravelore_feat2_desc: "Long-term contextual memory across extended dialogues.",
+        ravelore_feat3_title: "📚 Discover & Community",
+        ravelore_feat3_desc: "Explore trending community bots and add them to your library.",
+        ravelore_status: "Closed Testing",
+        ravelore_privacy_btn: "Privacy Policy",
+
+        footer_desc: "Fonzi: Ponzi Tycoon and RaveLore are official projects of our independent studio.",
+        footer_rights: "© 2026 Kam Interactive. All rights reserved.",
+        footer_fonzi_privacy: "Fonzi Privacy Policy",
+        footer_ravelore_privacy: "RaveLore Privacy Policy"
+      }
+    };
+
+    function setLanguage(lang) {
+      localStorage.setItem('kam_interactive_lang', lang);
+      document.documentElement.lang = lang;
+      
+      // Update meta tags & title
+      if (translations[lang].doc_title) document.title = translations[lang].doc_title;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && translations[lang].meta_desc) metaDesc.setAttribute('content', translations[lang].meta_desc);
+
+      // Update all elements with data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+
+      // Update active button state
+      const btnTr = document.getElementById('btn-tr');
+      const btnEn = document.getElementById('btn-en');
+      if (btnTr && btnEn) {
+        if (lang === 'tr') {
+          btnTr.className = "px-2.5 py-1 rounded-lg transition text-emerald-400 bg-slate-800 shadow-sm font-bold";
+          btnEn.className = "px-2.5 py-1 rounded-lg transition text-slate-400 hover:text-white font-bold";
+        } else {
+          btnEn.className = "px-2.5 py-1 rounded-lg transition text-purple-400 bg-slate-800 shadow-sm font-bold";
+          btnTr.className = "px-2.5 py-1 rounded-lg transition text-slate-400 hover:text-white font-bold";
+        }
+      }
+    }
+
+    // Init language from URL (?lang=en/tr), localStorage, or browser preference
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const paramLang = urlParams.get('lang');
+      const savedLang = localStorage.getItem('kam_interactive_lang');
+
+      const initialLang = (paramLang === 'en' || paramLang === 'tr') 
+        ? paramLang 
+        : (savedLang === 'en' || savedLang === 'tr') 
+          ? savedLang 
+          : 'tr';
+      setLanguage(initialLang);
+    });
+  </script>
 </body>
 </html>
