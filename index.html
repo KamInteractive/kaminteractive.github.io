@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr" class="dark">
+<html lang="tr" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kam Interactive | Fonzi: Ponzi Tycoon</title>
-  <meta name="description" content="Kam Interactive resmi web sitesi. Fonzi: Ponzi Tycoon mobil oyunu, gizlilik politikası ve kurumsal bilgiler." />
+  <title>Kam Interactive | Independent Game & AI Studio</title>
+  <meta name="description" content="Kam Interactive resmi web sitesi. Fonzi: Ponzi Tycoon ve RaveLore mobil uygulamaları, gizlilik politikaları ve stüdyo projeleri." />
   <link rel="icon" type="image/png" href="app-icon-512.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,112 +12,198 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .font-serif-luxury { font-family: 'Cinzel', serif; }
-    .font-mono-code { font-family: 'JetBrains Mono', monospace; }
+    .font-luxury { font-family: 'Cinzel', serif; }
+    .font-code { font-family: 'JetBrains Mono', monospace; }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-emerald-500 selection:text-slate-950 flex flex-col justify-between">
 
-  <!-- Glow effect -->
-  <div class="fixed inset-0 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.1)_0%,transparent_60%)] pointer-events-none"></div>
+  <!-- Background Ambient Glow -->
+  <div class="fixed inset-0 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.08)_0%,transparent_50%)] pointer-events-none"></div>
+  <div class="fixed inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(168,85,247,0.06)_0%,transparent_50%)] pointer-events-none"></div>
 
-  <!-- Header -->
-  <header class="relative border-b border-slate-800/80 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50">
-    <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 p-0.5 shadow-lg shadow-emerald-950/60 flex items-center justify-center">
-          <img src="app-icon-512.png" alt="Fonzi Icon" class="w-full h-full rounded-[10px] object-cover" />
+  <!-- Top Sticky Navigation -->
+  <header class="relative border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3.5">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-500 via-teal-400 to-purple-600 p-0.5 shadow-xl shadow-slate-950 flex items-center justify-center">
+          <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-purple-400 font-luxury">
+            K
+          </div>
         </div>
         <div>
-          <h1 class="font-bold text-white text-base tracking-tight leading-none">KAM INTERACTIVE</h1>
-          <span class="text-[11px] text-emerald-400 font-medium">Independent Mobile Game Studio</span>
+          <span class="font-black text-white text-base tracking-tight leading-none block">KAM INTERACTIVE</span>
+          <span class="text-[11px] text-slate-400 font-medium">Independent Game & AI Studio</span>
         </div>
       </div>
-      <nav class="flex items-center gap-4 text-xs font-semibold text-slate-300">
-        <a href="#about" class="hover:text-emerald-400 transition">Oyun Hakkında</a>
-        <a href="privacy.html" class="hover:text-emerald-400 transition">Gizlilik Politikası</a>
-        <a href="app-ads.txt" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-mono-code text-[11px] transition">app-ads.txt</a>
+
+      <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-300">
+        <a href="#games" class="hover:text-emerald-400 transition">Oyunlarımız & Uygulamalar</a>
+        <a href="#fonzi" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Fonzi
+        </a>
+        <a href="#ravelore" class="hover:text-purple-400 transition flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-purple-400"></span> RaveLore
+        </a>
+        <div class="h-4 w-px bg-slate-800"></div>
+        <a href="privacy.html" class="hover:text-slate-100 transition">Fonzi Gizlilik</a>
+        <a href="ravelore-privacy.html" class="hover:text-slate-100 transition">RaveLore Gizlilik</a>
+        <a href="app-ads.txt" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700/80 font-code text-[11px] transition">app-ads.txt</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <main class="relative max-w-5xl mx-auto px-6 py-16 flex-1 flex flex-col justify-center">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-      
-      <!-- Left Column: Content -->
-      <div class="md:col-span-7 space-y-6">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Resmi Mobil Oyun Lansmanı
-        </div>
-
-        <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tight leading-tight">
-          FONZI: <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 font-serif-luxury">PONZI TYCOON</span>
-        </h2>
-
-        <p class="text-slate-300 text-base leading-relaxed">
-          Köhne bir banka gişesinden Boğaz manzaralı lüks rezidanslara uzanan, kara mizah ve hiciv dolu saadet zinciri simülasyonu. Mahalle esnafından sosyete simalarına yatırımcıları ikna edin, faiz pazarlığı yapın, krizleri savuşturun ve operasyon patlamadan serveti offshore hesaplara kaçırın!
-        </p>
-
-        <!-- Feature Pills -->
-        <div class="grid grid-cols-2 gap-3 pt-2 text-xs">
-          <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-            <span class="text-emerald-400 font-bold block mb-1">💼 Dinamik Pazarlık</span>
-            <span class="text-slate-400">Yatırımcı açgözlülüğüne göre faiz vaatleri verin.</span>
-          </div>
-          <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-            <span class="text-cyan-400 font-bold block mb-1">📈 Canlı Borsa & Portföy</span>
-            <span class="text-slate-400">BIST hisseleri ve kripto piyasalarında kâr avı.</span>
-          </div>
-          <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-            <span class="text-amber-400 font-bold block mb-1">🚨 KASAK & Baskınlar</span>
-            <span class="text-slate-400">Gazete manşetleri ve teftiş kurulu denetimleri.</span>
-          </div>
-          <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-            <span class="text-purple-400 font-bold block mb-1">✈️ Özel Jet Kaçışı</span>
-            <span class="text-slate-400">İsviçre hesaplarına fon aktararak kaçış planı.</span>
-          </div>
-        </div>
-
-        <!-- Call to actions -->
-        <div class="pt-4 flex flex-wrap items-center gap-4">
-          <div class="px-5 py-3.5 rounded-xl bg-emerald-600 text-white font-bold text-sm shadow-xl shadow-emerald-950/80 flex items-center gap-2.5">
-            <span>Google Play Store</span>
-            <span class="text-[11px] bg-emerald-700/80 px-2 py-0.5 rounded font-medium">Yakında Yayında</span>
-          </div>
-          <a href="privacy.html" class="px-5 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-850 text-slate-200 border border-slate-700 font-bold text-sm transition">
-            Gizlilik Politikası (Privacy Policy)
-          </a>
-        </div>
-      </div>
-
-      <!-- Right Column: Visual Box -->
-      <div class="md:col-span-5 flex justify-center">
-        <div class="relative w-72 sm:w-80 aspect-square rounded-3xl bg-gradient-to-tr from-slate-900 via-slate-850 to-slate-800 border-2 border-emerald-500/40 p-5 shadow-2xl shadow-emerald-950/60 flex flex-col items-center justify-center text-center group">
-          <div class="absolute -top-3 px-3 py-1 rounded-full bg-emerald-500 text-slate-950 text-[10px] font-black uppercase tracking-widest shadow-md">
-            Öne Çıkan Başlık
-          </div>
-          <img src="app-icon-512.png" alt="Fonzi 3D Icon" class="w-48 h-48 rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300" />
-          <h3 class="text-lg font-black text-white mt-4">Fonzi: Ponzi Tycoon</h3>
-          <p class="text-xs text-slate-400 mt-1">Müdürün Gizli Fonu • v1.0.0</p>
-        </div>
-      </div>
-
+  <!-- Studio Hero Header -->
+  <section class="relative max-w-6xl mx-auto px-6 pt-16 pb-12 text-center">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-emerald-500/10 via-slate-900 to-purple-500/10 border border-slate-800 text-slate-300 text-xs font-bold uppercase tracking-wider mb-6">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      Kam Interactive Resmi Portföyü
     </div>
+    <h2 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight max-w-3xl mx-auto">
+      Yeni Nesil Mobil Oyunlar & <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-purple-400">Yapay Zekâ Deneyimleri</span>
+    </h2>
+    <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto mt-4 leading-relaxed">
+      Finansal hiciv simülasyonlarından etkileşimli çok karakterli yapay zekâ evrenlerine kadar yenilikçi ve sürükleyici mobil deneyimler geliştiriyoruz.
+    </p>
+  </section>
+
+  <!-- Main Showcase Container -->
+  <main id="games" class="max-w-6xl mx-auto px-6 py-6 space-y-16 flex-1 w-full">
+
+    <!-- PROJECT 1: FONZI: PONZI TYCOON -->
+    <article id="fonzi" class="relative rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border border-emerald-500/30 p-8 sm:p-10 shadow-2xl shadow-emerald-950/40 overflow-hidden group">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        <!-- Visual / Icon Column -->
+        <div class="lg:col-span-4 flex flex-col items-center text-center">
+          <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-3xl bg-gradient-to-tr from-emerald-950 to-slate-900 border-2 border-emerald-500/50 p-3 shadow-2xl shadow-emerald-950/80 group-hover:scale-105 transition-transform duration-300">
+            <img src="app-icon-512.png" alt="Fonzi App Icon" class="w-full h-full rounded-2xl object-cover" />
+          </div>
+          <div class="mt-4 flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-bold">Simülasyon & Tycoon</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[11px] font-mono">v1.0.0</span>
+          </div>
+        </div>
+
+        <!-- Description Column -->
+        <div class="lg:col-span-8 space-y-5">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-400">
+            <span>💼 Finansal Hiciv Simülasyonu</span>
+          </div>
+          <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+            FONZI: <span class="text-emerald-400 font-luxury">PONZI TYCOON</span>
+          </h3>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Köhne bir banka gişesinden Boğaz manzaralı lüks rezidanslara uzanan kara mizah dolu bir saadet zinciri simülasyonu! Mahalle esnafından sosyete simalarına yatırımcıları ikna edin, faiz pazarlığı yapın, krizleri savuşturun ve operasyon patlamadan serveti offshore hesaplara kaçırın.
+          </p>
+
+          <!-- Key Features -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-1 text-xs">
+            <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
+              <span class="text-emerald-400 font-bold block">💰 Dinamik Pazarlık</span>
+              <span class="text-slate-400 text-[11px]">Faiz oranını açgözlülüğe göre belirleyin.</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
+              <span class="text-cyan-400 font-bold block">📈 Canlı Borsa</span>
+              <span class="text-slate-400 text-[11px]">BIST ve kripto portföy yönetimi.</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
+              <span class="text-purple-400 font-bold block">✈️ Özel Jet Kaçışı</span>
+              <span class="text-slate-400 text-[11px]">İsviçre hesaplarına fon aktararak kaçış.</span>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <div class="px-4 py-2.5 rounded-xl bg-emerald-600 text-white font-bold text-xs shadow-lg shadow-emerald-950 flex items-center gap-2">
+              <span>Google Play Store</span>
+              <span class="bg-emerald-700/80 px-2 py-0.5 rounded text-[10px]">Kapalı Testte</span>
+            </div>
+            <a href="privacy.html" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-750 text-slate-200 border border-slate-700 font-bold text-xs transition">
+              Gizlilik Politikası (Privacy Policy)
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 2: RAVELORE -->
+    <article id="ravelore" class="relative rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border border-purple-500/30 p-8 sm:p-10 shadow-2xl shadow-purple-950/40 overflow-hidden group">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        <!-- Visual / Icon Column -->
+        <div class="lg:col-span-4 flex flex-col items-center text-center">
+          <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-3xl bg-gradient-to-tr from-purple-950 to-slate-900 border-2 border-purple-500/50 p-3 shadow-2xl shadow-purple-950/80 group-hover:scale-105 transition-transform duration-300">
+            <img src="ravelore-icon-512.png" alt="RaveLore App Icon" class="w-full h-full rounded-2xl object-cover" />
+          </div>
+          <div class="mt-4 flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30 text-[11px] font-bold">Yapay Zekâ & Rol Yapma</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[11px] font-mono">v1.0.0</span>
+          </div>
+        </div>
+
+        <!-- Description Column -->
+        <div class="lg:col-span-8 space-y-5">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-purple-400">
+            <span>🎭 Çok Karakterli Hikâye ve Rol Yapma Platformu</span>
+          </div>
+          <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+            RAVELORE: <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 font-luxury">AI ROLEPLAY</span>
+          </h3>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Gelişmiş senaryo motoru ve çoklu karakter mimarisi ile donatılmış yeni nesil yapay zekâ rol yapma deneyimi. Kendi özgün evrenlerinizi yaratın, derin kişilik kartlarına sahip karakterleri sahneye dahil edin ve dinamik sahne hafızasıyla tutarlı, sinematik sohbetlerin tadını çıkarın.
+          </p>
+
+          <!-- Key Features -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-1 text-xs">
+            <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
+              <span class="text-purple-400 font-bold block">👥 Çoklu Karakterler</span>
+              <span class="text-slate-400 text-[11px]">1–5 farklı karakterle aynı anda rol yapın.</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
+              <span class="text-pink-400 font-bold block">🧠 Sahne & Bellek Mantığı</span>
+              <span class="text-slate-400 text-[11px]">Uzun diyaloglarda tutarlı yapay zekâ hafızası.</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
+              <span class="text-cyan-400 font-bold block">📚 Keşfet & Topluluk</span>
+              <span class="text-slate-400 text-[11px]">Popüler botları keşfedin, kütüphanenize ekleyin.</span>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <div class="px-4 py-2.5 rounded-xl bg-purple-600 text-white font-bold text-xs shadow-lg shadow-purple-950 flex items-center gap-2">
+              <span>Google Play Store</span>
+              <span class="bg-purple-700/80 px-2 py-0.5 rounded text-[10px]">Aktif Geliştirme</span>
+            </div>
+            <a href="ravelore-privacy.html" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-750 text-slate-200 border border-slate-700 font-bold text-xs transition">
+              Gizlilik Politikası (Privacy Policy)
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
   </main>
 
   <!-- Footer -->
-  <footer class="relative border-t border-slate-800/80 bg-slate-900/60 py-8 text-xs text-slate-500">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>
+  <footer class="relative border-t border-slate-800/80 bg-slate-950/90 py-10 text-xs text-slate-500 mt-16">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-left">
+        <div class="flex items-center justify-center md:justify-start gap-2 text-white font-bold text-sm mb-1">
+          <span>KAM INTERACTIVE</span>
+        </div>
         <p>© 2026 Kam Interactive. Tüm hakları saklıdır.</p>
-        <p class="text-[11px] text-slate-600 mt-0.5">Oyun içerisindeki kurum ve olaylar tamamen kurgusal bir parodidir.</p>
+        <p class="text-[11px] text-slate-600 mt-0.5">Fonzi: Ponzi Tycoon ve RaveLore bağımsız oyun stüdyomuzun resmi projeleridir.</p>
       </div>
-      <div class="flex items-center gap-6">
-        <a href="privacy.html" class="hover:text-slate-300 transition">Gizlilik Politikası</a>
-        <a href="app-ads.txt" target="_blank" class="hover:text-slate-300 transition">app-ads.txt Doğrulaması</a>
-        <a href="mailto:contact.kaminteractive@gmail.com" class="hover:text-emerald-400 transition">İletişim</a>
+
+      <div class="flex flex-wrap items-center justify-center gap-6">
+        <a href="privacy.html" class="hover:text-emerald-400 transition">Fonzi Gizlilik Politikası</a>
+        <a href="ravelore-privacy.html" class="hover:text-purple-400 transition">RaveLore Gizlilik Politikası</a>
+        <a href="app-ads.txt" target="_blank" class="hover:text-slate-300 font-code transition">app-ads.txt</a>
+        <a href="mailto:contact.kaminteractive@gmail.com" class="hover:text-emerald-400 transition">contact.kaminteractive@gmail.com</a>
       </div>
     </div>
   </footer>
