@@ -65,7 +65,9 @@
     <h2>1. Toplanan ve İşlenen Veriler</h2>
     <p>Fonzi: Ponzi Tycoon kurgusal bir simülasyon oyunudur. Telefon numarası, fiziksel adres, rehber, konum veya banka/ödeme bilgisi <strong>toplanmaz</strong>. Oyunun işleyişi için aşağıdaki veriler işlenir:</p>
     <ul>
-      <li><strong>Cihazda saklanan veriler (sunucuya gönderilmez):</strong> Oyuna giriş için girdiğiniz e-posta adresi, takma ad, 4 haneli PIN kodu ve oyun kaydınız yalnızca cihazınızın yerel hafızasında tutulur. E-posta adresiniz doğrulanmaz ve e-posta gönderilmez.</li>
+      <li><strong>Cihazda saklanan veriler (sunucuya gönderilmez):</strong> E-posta ve PIN ile giriş yaparsanız girdiğiniz e-posta adresi, takma ad, 4 haneli PIN kodu ve oyun kaydınız yalnızca cihazınızın yerel hafızasında tutulur. Bu yöntemde e-posta adresiniz doğrulanmaz ve e-posta gönderilmez.</li>
+      <li><strong>Google ile giriş (Google Firebase Authentication):</strong> "Google ile Giriş Yap" seçeneğini kullanırsanız Google hesabınızın e-posta adresi, görünen adı ve Firebase kullanıcı kimliği (UID) işlenir. Google şifrenize erişmeyiz.</li>
+      <li><strong>Bulut kayıt yedeği (Google Firebase Cloud Firestore):</strong> Google ile giriş yaptığınızda oyun kaydınız (ilerleme verileri) UID'nize bağlı bir belgede yedeklenir; böylece telefon değiştirdiğinizde kaydınızı geri yükleyebilirsiniz. Bu yedek yalnızca sizin hesabınızla okunabilir ve hesabınızı sildiğinizde silinir.</li>
       <li><strong>Herkese açık liderlik tablosu (Google Firebase Cloud Firestore):</strong> Oyun sonunda skorunuz çevrimiçi liderlik tablosuna gönderilir. Gönderilen veriler: oyunda seçtiğiniz müdür adı (takma ad), banka adı, avatar simgesi, skor ve oyun istatistikleri (gün sayısı, servet, itibar, oyun sonu), zaman damgası ve uygulama sürümü. <strong>E-posta adresiniz gönderilmez.</strong> Bu bilgiler tüm oyuncular tarafından görülebilir; bu nedenle takma ad olarak gerçek adınızı veya kişisel bilgilerinizi yazmamanızı öneririz.</li>
     </ul>
 
@@ -80,8 +82,9 @@
     <p><strong>Google Firebase:</strong> Liderlik tablosu verileri Google Firebase Cloud Firestore üzerinde saklanır; bu sırada Google IP adresinizi teknik olarak işleyebilir.</p>
     <p>Bu verilerin Google tarafından işlenmesi hakkında ayrıntılı bilgi için <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a> sayfasını inceleyiniz.</p>
 
-    <h2>3. Veri Saklama ve Silme Hakkınız</h2>
+    <h2 id="delete-account">3. Veri Saklama ve Silme Hakkınız (Hesap Silme)</h2>
     <ul>
+      <li><strong>Hesap ve bulut yedeği:</strong> Uygulamada Ayarlar &gt; "Hesabımı ve Verilerimi Sil" seçeneğiyle profilinizi, bulut kayıt yedeğinizi ve Google bağlantınızı kalıcı olarak silebilirsiniz. Uygulamaya erişemiyorsanız, kayıtlı e-posta adresinizi belirterek aşağıdaki adrese yazarak hesabınızın ve yedeğinizin silinmesini isteyebilirsiniz; talebiniz makul sürede yerine getirilir.</li>
       <li><strong>Cihazdaki veriler:</strong> Uygulamada "Giriş &gt; PIN'imi Unuttum / Profili Sil" seçeneğiyle profilinizi ve oyun kaydınızı silebilirsiniz; uygulamayı kaldırmak da bu verilerin tamamını siler.</li>
       <li><strong>Liderlik tablosu kayıtları:</strong> Skor kayıtları salt-ekleme (değiştirilemez) yapıdadır. Kayıtlarınızın silinmesini istemek için müdür adınızı, banka adınızı ve yaklaşık skorunuzu belirterek aşağıdaki e-posta adresine yazabilirsiniz; talebiniz makul sürede yerine getirilir.</li>
     </ul>
@@ -113,7 +116,9 @@
     <h2>1. Information We Collect and Process</h2>
     <p>Fonzi: Ponzi Tycoon is a fictional simulation game. We do <strong>not</strong> collect phone numbers, physical addresses, contacts, precise location, or payment/financial details. The following data is processed to run the game:</p>
     <ul>
-      <li><strong>Stored on your device only (not sent to our servers):</strong> the email address you type to sign in, your alias, a 4-digit PIN, and your saved game stay in your device's local storage. Your email is not verified and no emails are sent.</li>
+      <li><strong>Stored on your device only (not sent to our servers):</strong> if you sign in with email and PIN, the email address you type, your alias, a 4-digit PIN, and your saved game stay in your device's local storage. With this method your email is not verified and no emails are sent.</li>
+      <li><strong>Sign in with Google (Google Firebase Authentication):</strong> if you use "Sign in with Google", we process your Google account's email address, display name and Firebase user ID (UID). We never have access to your Google password.</li>
+      <li><strong>Cloud save backup (Google Firebase Cloud Firestore):</strong> when you sign in with Google, your game save (progress data) is backed up in a document tied to your UID so you can restore it on a new phone. The backup is readable only by your account and is deleted when you delete your account.</li>
       <li><strong>Public leaderboard (Google Firebase Cloud Firestore):</strong> when a run ends, your score is submitted to the online leaderboard. Submitted data: the manager name (alias) you chose, bank name, avatar icon, score and run statistics (days, wealth, reputation, outcome), timestamp and app version. <strong>Your email address is not submitted.</strong> This information is visible to all players, so please do not use your real name or personal information as an alias.</li>
     </ul>
 
@@ -128,8 +133,9 @@
     <p><strong>Google Firebase:</strong> leaderboard data is stored on Google Firebase Cloud Firestore, where Google may technically process your IP address.</p>
     <p>For details on how Google processes this data, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
 
-    <h2>3. Data Retention and Deletion</h2>
+    <h2 id="delete-account-en">3. Data Retention and Deletion (Account Deletion)</h2>
     <ul>
+      <li><strong>Account and cloud backup:</strong> in the app go to Settings &gt; "Delete My Account &amp; Data" to permanently delete your profile, cloud save backup and Google link. If you cannot access the app, email us from your registered address asking for your account and backup to be deleted and we will do so within a reasonable time.</li>
       <li><strong>On-device data:</strong> use "Login &gt; Forgot PIN / Delete Profile" in the app to delete your profile and saved game; uninstalling the app also removes all of it.</li>
       <li><strong>Leaderboard entries:</strong> score records are append-only. To request deletion, email us your manager name, bank name and approximate score and we will remove the entry within a reasonable time.</li>
     </ul>
