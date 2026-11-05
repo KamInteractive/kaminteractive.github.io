@@ -1,202 +1,28 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RaveLore - Gizlilik Politikası ve Kullanım Koşulları</title>
-  <style>
-    :root {
-      --bg: #0f1117;
-      --card-bg: #1a1d26;
-      --text: #e2e8f0;
-      --text-muted: #94a3b8;
-      --primary: #8b5cf6;
-      --primary-hover: #7c3aed;
-      --accent: #06b6d4;
-      --border: #2d3748;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-      padding: 24px 16px;
-    }
-    .container {
-      max-width: 840px;
-      margin: 0 auto;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 32px;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .logo {
-      font-size: 32px;
-      font-weight: 800;
-      background: linear-gradient(135deg, #a855f7, #38bdf8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
-    }
-    .subtitle {
-      color: var(--text-muted);
-      font-size: 15px;
-    }
-    .lang-nav {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 16px;
-    }
-    .lang-btn {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 6px 14px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 13px;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-    .lang-btn:hover, .lang-btn.active {
-      background: var(--primary);
-      border-color: var(--primary);
-      color: #fff;
-    }
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      margin-bottom: 24px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-    }
-    h2 {
-      font-size: 22px;
-      color: #fff;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 10px;
-    }
-    h3 {
-      font-size: 17px;
-      color: var(--accent);
-      margin: 20px 0 8px 0;
-    }
-    p, li {
-      font-size: 15px;
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-    ul {
-      padding-left: 20px;
-      margin-bottom: 16px;
-    }
-    .badge {
-      display: inline-block;
-      background: rgba(139, 92, 246, 0.15);
-      color: #c084fc;
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-    footer {
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 13px;
-      margin-top: 40px;
-      padding: 20px 0;
-      border-top: 1px solid var(--border);
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+  <title>Privacy Policy | RaveLore</title>
+  <meta name="description" content="Privacy Policy for RaveLore, an AI roleplay and storytelling app by Kam Interactive.">
+  <link rel="icon" href="ravelore/assets/icon.jpg">
+  <link rel="stylesheet" href="ravelore/assets/site.css">
 </head>
 <body>
   <div class="container">
-    <header>
-      <div class="logo">RaveLore</div>
-      <div class="subtitle">İnteraktif Rol Yapma ve Yapay Zekâ Hikâye Evreni</div>
-      <div class="lang-nav">
-        <a href="#tr" class="lang-btn active">Türkçe</a>
-        <a href="#en" class="lang-btn">English</a>
-      </div>
+    <header class="site-header">
+      <a class="brand" href="ravelore/"><img src="ravelore/assets/icon.jpg" alt="" width="36" height="36"><span>RaveLore</span></a>
+      <nav class="lang-nav" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="en">English</button>
+        <button type="button" class="lang-btn" data-lang="tr">Türkçe</button>
+      </nav>
     </header>
-
-    <!-- TÜRKÇE BÖLÜM -->
-    <section id="tr">
-      <div class="card">
-        <span class="badge">Yasal Bilgilendirme</span>
-        <h2>Gizlilik Politikası (Privacy Policy)</h2>
-        <p><strong>Son Güncelleme:</strong> 2 Kasım 2026</p>
-        <p>RaveLore ("Uygulama"), kullanıcılarının gizliliğine ve kişisel verilerinin korunmasına azami özen göstermektedir. Bu Gizlilik Politikası, uygulamamızı kullandığınızda verilerinizin nasıl işlendiğini, saklandığını ve korunduğunu açıklar.</p>
-
-        <h3>1. Veri Sahipliği ve Yerel Öncelik (Offline-First)</h3>
-        <p>RaveLore, oluşturduğunuz hikâyeleri ve karakter kartlarını öncelikle cihazınızın yerel hafızasında saklar. Verileriniz doğrudan sizin cihazınızda güvenle işlenir ve hesabınıza bağlı olarak güvenli bulut yedeklemesi sağlanır.</p>
-
-        <h3>2. Bulut Eşitleme ve Güvenlik</h3>
-        <p>Hesap açtığınızda veya giriş yaptığınızda kayıtlı hikâyeleriniz ve karakter kartlarınız güvenli bulut altyapımızda (Supabase) şifreli olarak yedeklenir. Parolanız asla açık metin olarak saklanmaz, endüstri standardı kriptografik algoritmalarla korunur.</p>
-
-        <h3>3. Yapay Zekâ İşleme ve Üçüncü Taraf Sağlayıcılar</h3>
-        <p>Bir hikâyede mesaj gönderdiğinizde; yazdığınız metin, o sahneye ilişkin son mesajlar, aktif karakter kartları ve senaryo/dünya bilgisi güvenli bir Edge Function üzerinden yapay zekâ sağlayıcılarına (OpenRouter aracılığıyla erişilen model sağlayıcıları, şu anda Google, DeepSeek ve Alibaba dahil; yardımcı işlemlerde OpenAI) iletilir ve yanıt üretilir. Bu sağlayıcılar verileri Avrupa Ekonomik Alanı ve Türkiye dışındaki ülkelerde (ör. ABD, Çin) işleyebilir; RaveLore yalnızca yanıt üretmek için gereken metni gönderir ve sağlayıcıların kendi gizlilik şartları geçerlidir. Sesli okuma özelliğini kullanırsanız okunacak metin ses üretimi için ElevenLabs'e gönderilir. Yapay zekâ ile kapak oluşturursanız dünyanızın adı, türü ve senaryodan kısa bir alıntı görsel üretimi için OpenRouter üzerinden Google Gemini görsel modeline, bu çalışmazsa OpenAI'a ve son çare olarak Pollinations (image.pollinations.ai) hizmetine gönderilir. E-posta adresiniz ve hesap kimliğiniz bu sağlayıcılara iletilmez. Özel hikâyeleriniz ve bireysel sohbetleriniz yapay zekâ modellerini eğitmek için kullanılmaz; yalnızca toplulukla herkese açık (Genel) olarak paylaştığınız dünyalar ve senaryo içerikleri, anonimleştirilerek RaveLore'un edebi kalitesini geliştirmek amacıyla değerlendirilebilir. Sağlayıcılar verileri kendi API şartlarına göre işler. Yapay zekâ yanıtları hatalı veya uygunsuz olabilir; bir yanıtı uygulama içinden şikâyet edebilirsiniz.</p>
-
-        <h3>4. Ödemeler</h3>
-        <p>Abonelik satın alımları yalnızca <strong>Google Play Faturalandırma</strong> üzerinden yapılır. RaveLore kart numarası, son kullanma tarihi veya CVV bilgisi toplamaz ve saklamaz. Sunucumuz, satın alma jetonunu Google Play ile doğrular ve hesabınıza bağlı abonelik kaydını (ürün, geçerlilik bitiş tarihi) saklar.</p>
-
-        <h3>5. Reklam Hizmetleri (Google AdMob)</h3>
-        <p>Uygulamamız ücretsiz kullanıcılara reklam sunmak ve ödüllü reklam karşılığında Lore Points vermek için Google AdMob SDK'sını kullanır. AdMob, reklam göstermek ve ölçmek için Reklam Kimliği ve cihaz bilgilerini işleyebilir. Reklam kimliğinizi veya reklam kişiselleştirmesini cihazınızın Google ayarlarından sıfırlayabilir ya da kapatabilirsiniz. Ayrıntılar için: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik ve Şartlar</a>.</p>
-
-        <h3>6. Hesap ve Veri Silme Hakkı</h3>
-        <p>Hesap ekranından hesabınızı silebilirsiniz. Silme işlemi profilinizi, hikâyelerinizi, karakterlerinizi, mesajlarınızı, geri bildirim/şikâyet kayıtlarınızı ve oturum bilgilerinizi kalıcı olarak kaldırır ve geri alınamaz. Silmeyle ilgili sorularınız için: contact.kaminteractive@gmail.com.</p>
-        <h3>7. Topladığımız Veriler</h3>
-        <ul>
-          <li><strong>Hesap:</strong> e-posta adresi ve hesap kimliği (misafir olarak kullanırsanız anonim bir kimlik).</li>
-          <li><strong>Profil:</strong> görünen ad ve seçtiyseniz avatar görseli.</li>
-          <li><strong>Kullanıcı içeriği:</strong> oluşturduğunuz hikâyeler, karakterler, kapak görselleri ve sohbet mesajları.</li>
-          <li><strong>18+ doğrulaması:</strong> doğum tarihiniz saklanmaz; yalnızca doğrulamanın yapıldığı zaman ve olgun içerik tercihiniz tutulur.</li>
-          <li><strong>Geri bildirim:</strong> şikâyet ettiğiniz yanıtın kopyası, seçtiğiniz neden ve notunuz.</li>
-          <li><strong>Abonelik ve puanlar:</strong> abonelik kaydı, Lore Points bakiyesi ve ödüllü reklam kayıtları.</li>
-          <li><strong>Cihaz/reklam:</strong> Reklam Kimliği ve reklam etkileşimleri (Google AdMob).</li>
-        </ul>
-        <p>Verileriniz reklam amaçlı satılmaz. Şikâyet bildirimleri, moderasyon amacıyla geliştiriciye e-posta (Resend) ile iletilir.</p>
-
-        <h3>8. Güvenlik, Saklama ve Çocuklar</h3>
-        <p>Veriler aktarım sırasında HTTPS ile şifrelenir ve hesap bazlı erişim kurallarıyla korunan Supabase altyapısında (AB bölgesi) saklanır. Verileri hesabınız açık olduğu sürece veya silene kadar saklarız. RaveLore 18 yaş ve üzeri kullanıcılara yöneliktir; çocuklara yönelik değildir ve 18 yaş altından bilerek veri toplamayız.</p>
-
-      </div>
-
-      <div class="card">
-        <h2>Kullanım Koşulları (Terms of Service)</h2>
-        <h3>1. Hizmetin Niteliği</h3>
-        <p>RaveLore, yaratıcı kurgu ve interaktif rol yapma deneyimi sunan bir platformdur. Üretilen tüm yanıtlar, karakter diyalogları ve olaylar tamamen kurgusaldır; eğlence ve edebî hikâye üretimi amacıyla sunulur.</p>
-
-        <h3>2. Yaş Sınırı ve İçerik İlkeleri (18+)</h3>
-        <p>RaveLore, 18 yaş ve üzeri yetişkin kullanıcılara yönelik edebi karanlık kurgu ve rol yapma platformudur. Yasa dışı, nefret söylemi barındıran veya gerçek şahısları hedef alan zararlı içerik üretilmesi kesinlikle yasaktır. 18 yaşından küçük kişileri içeren cinsel içerik üretilmesi kesinlikle yasaktır ve otomatik olarak engellenir.</p>
-
-        <h3>3. Fikrî Mülkiyet</h3>
-        <p>Oluşturduğunuz özgün hikâyelerin, evrenlerin ve karakterlerin fikrî mülkiyeti tamamen size aittir.</p>
-
-        <h3>4. Geliştirici ve İletişim</h3>
-        <p>Geliştirici / Yayıncı: <strong>KAM INTERACTIVE</strong><br>Gizlilik politikamız veya uygulamanın kullanımı ile ilgili sorularınız için bizimle iletişime geçebilirsiniz: <a href="mailto:contact.kaminteractive@gmail.com">contact.kaminteractive@gmail.com</a></p>
-      </div>
-    </section>
-
-    <!-- ENGLISH SECTION -->
-    <section id="en">
-      <div class="card">
+    <main>
+      <section id="en" lang="en" data-lang-section>
+        <div class="card">
         <span class="badge">Legal Document</span>
         <h2>Privacy Policy</h2>
-        <p><strong>Last Updated:</strong> November 2, 2026</p>
+        <p><strong>Last Updated:</strong> October 30, 2026</p>
         <p>RaveLore ("Application") is committed to protecting your privacy. This Privacy Policy outlines our practices regarding data collection, usage, and protection when you use our interactive AI storytelling app.</p>
 
         <h3>1. Data Ownership & Offline-First</h3>
@@ -232,26 +58,59 @@
         <p>Data is encrypted in transit with HTTPS and stored on Supabase infrastructure (EU region) protected by per-account access rules. We keep data while your account is open or until you delete it. RaveLore is intended for users aged 18 and over; it is not directed to children and we do not knowingly collect data from anyone under 18.</p>
 
       </div>
+      </section>
+      <section id="tr" lang="tr" data-lang-section hidden>
+        <div class="card">
+        <span class="badge">Yasal Bilgilendirme</span>
+        <h2>Gizlilik Politikası (Privacy Policy)</h2>
+        <p><strong>Son Güncelleme:</strong> 30 Ekim 2026</p>
+        <p>RaveLore ("Uygulama"), kullanıcılarının gizliliğine ve kişisel verilerinin korunmasına azami özen göstermektedir. Bu Gizlilik Politikası, uygulamamızı kullandığınızda verilerinizin nasıl işlendiğini, saklandığını ve korunduğunu açıklar.</p>
 
-      <div class="card">
-        <h2>Terms of Service</h2>
-        <h3>1. Nature of Service & Fiction Disclaimer</h3>
-        <p>RaveLore is an interactive creative storytelling and roleplay platform. All AI responses, character dialogues, and narrative events are entirely fictional for entertainment and creative roleplay purposes.</p>
+        <h3>1. Veri Sahipliği ve Yerel Öncelik (Offline-First)</h3>
+        <p>RaveLore, oluşturduğunuz hikâyeleri ve karakter kartlarını öncelikle cihazınızın yerel hafızasında saklar. Verileriniz doğrudan sizin cihazınızda güvenle işlenir ve hesabınıza bağlı olarak güvenli bulut yedeklemesi sağlanır.</p>
 
-        <h3>2. Age Restriction & Mature Themes (18+)</h3>
-        <p>RaveLore is intended strictly for users aged 18 and older due to dark fantasy and mature narrative themes. Producing illegal, hateful, or harassing content is strictly prohibited. Sexual content involving anyone under 18 is strictly prohibited and is automatically blocked.</p>
+        <h3>2. Bulut Eşitleme ve Güvenlik</h3>
+        <p>Hesap açtığınızda veya giriş yaptığınızda kayıtlı hikâyeleriniz ve karakter kartlarınız güvenli bulut altyapımızda (Supabase) şifreli olarak yedeklenir. Parolanız asla açık metin olarak saklanmaz, endüstri standardı kriptografik algoritmalarla korunur.</p>
 
-        <h3>3. Intellectual Property</h3>
-        <p>You retain full intellectual property rights over the original stories, worlds, and characters you create.</p>
+        <h3>3. Yapay Zekâ İşleme ve Üçüncü Taraf Sağlayıcılar</h3>
+        <p>Bir hikâyede mesaj gönderdiğinizde; yazdığınız metin, o sahneye ilişkin son mesajlar, aktif karakter kartları ve senaryo/dünya bilgisi güvenli bir Edge Function üzerinden yapay zekâ sağlayıcılarına (OpenRouter aracılığıyla erişilen model sağlayıcıları, şu anda Google, DeepSeek ve Alibaba dahil; yardımcı işlemlerde OpenAI) iletilir ve yanıt üretilir. Bu sağlayıcılar verileri Avrupa Ekonomik Alanı ve Türkiye dışındaki ülkelerde (ör. ABD, Çin) işleyebilir; RaveLore yalnızca yanıt üretmek için gereken metni gönderir ve sağlayıcıların kendi gizlilik şartları geçerlidir. Sesli okuma özelliğini kullanırsanız okunacak metin ses üretimi için ElevenLabs'e gönderilir. Yapay zekâ ile kapak oluşturursanız dünyanızın adı, türü ve senaryodan kısa bir alıntı görsel üretimi için OpenRouter üzerinden Google Gemini görsel modeline, bu çalışmazsa OpenAI'a ve son çare olarak Pollinations (image.pollinations.ai) hizmetine gönderilir. E-posta adresiniz ve hesap kimliğiniz bu sağlayıcılara iletilmez. Özel hikâyeleriniz ve bireysel sohbetleriniz yapay zekâ modellerini eğitmek için kullanılmaz; yalnızca toplulukla herkese açık (Genel) olarak paylaştığınız dünyalar ve senaryo içerikleri, anonimleştirilerek RaveLore'un edebi kalitesini geliştirmek amacıyla değerlendirilebilir. Sağlayıcılar verileri kendi API şartlarına göre işler. Yapay zekâ yanıtları hatalı veya uygunsuz olabilir; bir yanıtı uygulama içinden şikâyet edebilirsiniz.</p>
 
-        <h3>4. Developer & Contact Information</h3>
-        <p>Developer / Publisher: <strong>KAM INTERACTIVE</strong><br>For any inquiries regarding our privacy policy or terms, please contact us at: <a href="mailto:contact.kaminteractive@gmail.com">contact.kaminteractive@gmail.com</a></p>
+        <h3>4. Ödemeler</h3>
+        <p>Abonelik satın alımları yalnızca <strong>Google Play Faturalandırma</strong> üzerinden yapılır. RaveLore kart numarası, son kullanma tarihi veya CVV bilgisi toplamaz ve saklamaz. Sunucumuz, satın alma jetonunu Google Play ile doğrular ve hesabınıza bağlı abonelik kaydını (ürün, geçerlilik bitiş tarihi) saklar.</p>
+
+        <h3>5. Reklam Hizmetleri (Google AdMob)</h3>
+        <p>Uygulamamız ücretsiz kullanıcılara reklam sunmak ve ödüllü reklam karşılığında Lore Points vermek için Google AdMob SDK'sını kullanır. AdMob, reklam göstermek ve ölçmek için Reklam Kimliği ve cihaz bilgilerini işleyebilir. Reklam kimliğinizi veya reklam kişiselleştirmesini cihazınızın Google ayarlarından sıfırlayabilir ya da kapatabilirsiniz. Ayrıntılar için: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik ve Şartlar</a>.</p>
+
+        <h3>6. Hesap ve Veri Silme Hakkı</h3>
+        <p>Hesap ekranından hesabınızı silebilirsiniz. Silme işlemi profilinizi, hikâyelerinizi, karakterlerinizi, mesajlarınızı, geri bildirim/şikâyet kayıtlarınızı ve oturum bilgilerinizi kalıcı olarak kaldırır ve geri alınamaz. Silmeyle ilgili sorularınız için: contact.kaminteractive@gmail.com.</p>
+        <h3>7. Topladığımız Veriler</h3>
+        <ul>
+          <li><strong>Hesap:</strong> e-posta adresi ve hesap kimliği (misafir olarak kullanırsanız anonim bir kimlik).</li>
+          <li><strong>Profil:</strong> görünen ad ve seçtiyseniz avatar görseli.</li>
+          <li><strong>Kullanıcı içeriği:</strong> oluşturduğunuz hikâyeler, karakterler, kapak görselleri ve sohbet mesajları.</li>
+          <li><strong>18+ doğrulaması:</strong> doğum tarihiniz saklanmaz; yalnızca doğrulamanın yapıldığı zaman ve olgun içerik tercihiniz tutulur.</li>
+          <li><strong>Geri bildirim:</strong> şikâyet ettiğiniz yanıtın kopyası, seçtiğiniz neden ve notunuz.</li>
+          <li><strong>Abonelik ve puanlar:</strong> abonelik kaydı, Lore Points bakiyesi ve ödüllü reklam kayıtları.</li>
+          <li><strong>Cihaz/reklam:</strong> Reklam Kimliği ve reklam etkileşimleri (Google AdMob).</li>
+        </ul>
+        <p>Verileriniz reklam amaçlı satılmaz. Şikâyet bildirimleri, moderasyon amacıyla geliştiriciye e-posta (Resend) ile iletilir.</p>
+
+        <h3>8. Güvenlik, Saklama ve Çocuklar</h3>
+        <p>Veriler aktarım sırasında HTTPS ile şifrelenir ve hesap bazlı erişim kurallarıyla korunan Supabase altyapısında (AB bölgesi) saklanır. Verileri hesabınız açık olduğu sürece veya silene kadar saklarız. RaveLore 18 yaş ve üzeri kullanıcılara yöneliktir; çocuklara yönelik değildir ve 18 yaş altından bilerek veri toplamayız.</p>
+
       </div>
-    </section>
-
-    <footer>
-      <p>&copy; 2026 RaveLore. Tüm hakları saklıdır. Geliştirici: KAM INTERACTIVE</p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <nav>
+        <a href="ravelore/">Home</a>
+        <a href="ravelore/privacy.html">Privacy</a>
+        <a href="ravelore/terms.html">Terms</a>
+        <a href="ravelore/delete-account.html">Delete account</a>
+      </nav>
+      <p>&copy; 2026 Kam Interactive</p>
     </footer>
   </div>
+  <script src="ravelore/assets/lang.js"></script>
 </body>
 </html>
