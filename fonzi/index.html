@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fonzi: Ponzi Tycoon | Google Play</title>
+  <meta name="description" content="Fonzi: Ponzi Tycoon - Türkçe kara mizah tycoon. Google Play'de ücretsiz. / Dark-comedy tycoon, free on Google Play.">
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px;
+      background: radial-gradient(circle at 50% 0%, rgba(16,185,129,.28), transparent 60%), #05080f; color: #e2e8f0;
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; text-align: center; }
+    main { width: 100%; max-width: 420px; }
+    img { width: 132px; height: 132px; border-radius: 28px; box-shadow: 0 12px 40px rgba(16,185,129,.35); }
+    h1 { margin: 20px 0 4px; font-size: 30px; letter-spacing: .5px; color: #fff; }
+    h1 span { color: #10b981; font-style: italic; }
+    p { margin: 6px 0; color: #94a3b8; line-height: 1.5; }
+    .tr { color: #e2e8f0; font-size: 18px; font-weight: 600; margin-top: 18px; }
+    a.btn { display: block; margin: 22px auto 0; padding: 18px 20px; border-radius: 18px; text-decoration: none; font-weight: 800; font-size: 18px;
+      color: #fff; background: linear-gradient(90deg, #059669, #0d9488); box-shadow: 0 10px 30px rgba(5,150,105,.4); }
+    a.alt { display: inline-block; margin-top: 16px; color: #34d399; font-size: 14px; }
+    small { display: block; margin-top: 28px; color: #64748b; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="../app-icon-512.png" alt="Fonzi: Ponzi Tycoon">
+    <h1>Fonzi: <span>Ponzi Tycoon</span></h1>
+    <p class="tr">Fon battı. Sıra sende.</p>
+    <p>The fund collapsed. Your turn.</p>
+    <a class="btn" id="play" href="https://play.google.com/store/apps/details?id=com.fonzi.ponzitycoon">Google Play'de aç • Open on Google Play</a>
+    <a class="alt" id="market" href="market://details?id=com.fonzi.ponzitycoon">Play Store uygulamasında aç / Open in the Play Store app</a>
+    <small>Android • Ücretsiz / Free • 18+ • Tamamen kurgusal kara mizah / Purely fictional dark comedy • Reklam içerir / Contains ads<br>© Kam Interactive</small>
+  </main>
+  <script>
+    // Android'de kısa bir beklemeden sonra Play Store sayfasına yönlendir; olmazsa yukarıdaki düğmeler çalışır.
+    (function () {
+      if (/Android/i.test(navigator.userAgent)) {
+        setTimeout(function () {
+          window.location.href = document.getElementById('play').href;
+        }, 700);
+      }
+    })();
+  </script>
+</body>
+</html>
